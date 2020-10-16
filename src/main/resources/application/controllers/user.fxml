@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="412.0" prefWidth="935.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controllers.UserController">
+   <children>
+      <TableView fx:id="table" layoutX="-2.0" prefHeight="261.0" prefWidth="468.0" AnchorPane.bottomAnchor="151.0" AnchorPane.leftAnchor="-2.0" AnchorPane.rightAnchor="469.0" AnchorPane.topAnchor="0.0">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="80.00002789497375" text="id" />
+          <TableColumn fx:id="name" prefWidth="168.00000762939453" text="name" />
+            <TableColumn fx:id="items" prefWidth="116.66664123535156" text="items" />
+            <TableColumn fx:id="rating" prefWidth="100.66665649414062" text="rating" />
+        </columns>
+      </TableView>
+      <Text layoutX="65.0" layoutY="294.0" strokeType="OUTSIDE" strokeWidth="0.0" text="View restaurant items/add restaurants to favourite list" />
+      <Button layoutX="103.0" layoutY="321.0" mnemonicParsing="false" onAction="#viewRestaurantItems" text="View Items" />
+      <TableView fx:id="table1" layoutX="466.0" prefHeight="261.0" prefWidth="468.0">
+         <columns>
+            <TableColumn fx:id="id1" prefWidth="80.00002789497375" text="id" />
+            <TableColumn fx:id="name1" prefWidth="168.00000762939453" text="name" />
+            <TableColumn fx:id="items1" prefWidth="116.66664123535156" text="items" />
+            <TableColumn fx:id="rating1" prefWidth="100.66665649414062" text="rating" />
+         </columns>
+      </TableView>
+      <Button layoutX="197.0" layoutY="321.0" mnemonicParsing="false" onAction="#addRestaurantToFavourites" prefHeight="25.0" prefWidth="114.0" text="Add to favourites" />
+      <Button layoutX="481.0" layoutY="321.0" mnemonicParsing="false" onAction="#rateRestaurant" text="Rate" />
+      <Button layoutX="650.0" layoutY="321.0" mnemonicParsing="false" onAction="#deleteFavouriteRestaurant" text="Delete favourite" />
+      <Button layoutX="197.0" layoutY="371.0" mnemonicParsing="false" onAction="#searchByRating" text="Search by rating" />
+      <ComboBox fx:id="ratingBox" layoutX="397.0" layoutY="321.0" prefHeight="25.0" prefWidth="74.0" />
+      <Text layoutX="606.0" layoutY="294.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Delete restaurant from favourite list" />
+      <TextField fx:id="searchRatingBox" layoutX="64.0" layoutY="371.0" prefHeight="25.0" prefWidth="114.0" />
+      <Button layoutX="318.0" layoutY="371.0" mnemonicParsing="false" text="Show all" onAction="#updateTable"/>
+   </children>
+</AnchorPane>

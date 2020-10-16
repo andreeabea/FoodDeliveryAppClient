@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="417.0" prefWidth="405.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controllers.AdminDiscountsController">
+   <children>
+      <TableView fx:id="table" layoutX="46.0" prefHeight="256.0" prefWidth="314.0" AnchorPane.bottomAnchor="161.0" AnchorPane.leftAnchor="46.0" AnchorPane.rightAnchor="45.0" AnchorPane.topAnchor="0.0">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="96.66662216186523" text="id" />
+          <TableColumn fx:id="discount" prefWidth="214.66664123535156" text="discount" />
+        </columns>
+      </TableView>
+      <Button fx:id="deleteButton" layoutX="149.0" layoutY="285.0" mnemonicParsing="false" onAction="#deleteDiscount" text="Delete" />
+      <TextField fx:id="idField" layoutX="71.0" layoutY="285.0" prefHeight="25.0" prefWidth="74.0" />
+      <Text layoutX="14.0" layoutY="302.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter id" />
+      <Text layoutX="67.0" layoutY="274.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Delete discount" />
+      <Text layoutX="288.0" layoutY="274.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add new discount" />
+      <Button fx:id="createButton" layoutX="310.0" layoutY="377.0" mnemonicParsing="false" onAction="#addDiscount" text="Create" />
+      <Text layoutX="224.0" layoutY="291.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Minimum number of items" wrappingWidth="74.0" />
+      <Text layoutX="224.0" layoutY="348.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Discount percentage" wrappingWidth="67.47265624999989" />
+      <TextField fx:id="itemsField" layoutX="292.0" layoutY="291.0" prefHeight="25.0" prefWidth="95.0" />
+      <TextField fx:id="percentageField" layoutX="292.0" layoutY="340.0" prefHeight="25.0" prefWidth="95.0" />
+   </children>
+</AnchorPane>
