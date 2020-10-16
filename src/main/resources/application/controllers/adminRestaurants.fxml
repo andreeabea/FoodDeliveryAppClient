@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="461.0" prefWidth="508.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controllers.AdminRestaurantsController">
+   <children>
+      <TableView fx:id="table" layoutX="-1.0" prefHeight="267.0" prefWidth="435.0" AnchorPane.bottomAnchor="194.0" AnchorPane.leftAnchor="37.0" AnchorPane.rightAnchor="36.0" AnchorPane.topAnchor="0.0">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="75.0" text="id" />
+          <TableColumn fx:id="name" prefWidth="172.00000762939453" text="name" />
+            <TableColumn fx:id="items" prefWidth="94.0" text="items" />
+            <TableColumn fx:id="rating" prefWidth="90.66668701171875" text="rating" />
+        </columns>
+      </TableView>
+      <Button fx:id="deleteButton" layoutX="145.0" layoutY="310.0" mnemonicParsing="false" onAction="#deleteRestaurant" text="Delete" />
+      <TextField fx:id="idField" layoutX="67.0" layoutY="310.0" prefHeight="25.0" prefWidth="74.0" />
+      <Text layoutX="10.0" layoutY="327.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter id" />
+      <Text layoutX="57.0" layoutY="284.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Update/Delete restaurant" />
+      <Text layoutX="366.0" layoutY="285.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Create new restaurant" />
+      <Button fx:id="updateButton" layoutX="76.0" layoutY="395.0" mnemonicParsing="false" onAction="#updateRestaurant" text="Update" />
+      <Button fx:id="createButton" layoutX="399.0" layoutY="350.0" mnemonicParsing="false" onAction="#createRestaurant" text="Create" />
+      <Button layoutX="229.0" layoutY="346.0" mnemonicParsing="false" onAction="#generateTxtRestaurantReport" text="Txt report" />
+      <Button layoutX="228.0" layoutY="382.0" mnemonicParsing="false" onAction="#generatePdfRestaurantReport" text="Pdf report" />
+      <TextField fx:id="nameFieldUpdate" layoutX="67.0" layoutY="354.0" prefHeight="25.0" prefWidth="127.0" />
+      <Text layoutX="14.0" layoutY="372.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" />
+      <TextField fx:id="nameFieldCreate" layoutX="366.0" layoutY="311.0" prefHeight="25.0" prefWidth="127.0" />
+      <Text layoutX="323.0" layoutY="329.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" />
+      <Button layoutX="226.0" layoutY="311.0" mnemonicParsing="false" onAction="#viewRestaurantItems" text="View Items" />
+      <Button onAction="#viewDiscounts" layoutX="215.0" layoutY="420.0" mnemonicParsing="false" text="View discounts" />
+   </children>
+</AnchorPane>
